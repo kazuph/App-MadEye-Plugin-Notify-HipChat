@@ -20,7 +20,7 @@ sub notify : Hook {
     my $room_id        = $conf->{room_id}        or die "missing room_id";
     my $from           = $conf->{from}           or "ikachan";
     my $notify         = $conf->{notify}         or 0;
-    my $message_format = $conf->{message_format} or "text";
+    my $message_format = $conf->{message_format} or "html";
     my $color          = $conf->{color}          or "yellow";
     my $format         = $conf->{format}         or "json";
 
@@ -83,7 +83,7 @@ App::MadEye::Plugin::Notify::HipChat - send message to HipChat
             required: no (defalut: ikachan)
         message_format:
             type: str
-            required: no (defalut: text)
+            required: no (defalut: html)
         notify:
             type: int
             required: no (defalut: 0)
