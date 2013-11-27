@@ -8,7 +8,7 @@ App::MadEye::Plugin::Notify::HipChat - send message to HipChat
     mapping:
         url:
             type: str
-            required: yes
+            required: no (defalut: https://api.hipchat.com/v1/rooms/message)
         auth_token:
             type: str
             required: yes
@@ -23,7 +23,7 @@ App::MadEye::Plugin::Notify::HipChat - send message to HipChat
             required: no (defalut: ikachan)
         message_format:
             type: str
-            required: no (defalut: text)
+            required: no (defalut: html)
         notify:
             type: int
             required: no (defalut: 0)
