@@ -13,16 +13,16 @@ sub notify : Hook {
     my ( $self, $context, $args ) = @_;
 
     my $conf = $self->{config}->{config};
-    my $url = $conf->{url} or "https://api.hipchat.com/v1/rooms/message";
+    my $url = $conf->{url} // "https://api.hipchat.com/v1/rooms/message";
     $url =~ s!/$!!g;
 
     my $auth_token     = $conf->{auth_token}     or die "missing auth_token";
     my $room_id        = $conf->{room_id}        or die "missing room_id";
-    my $from           = $conf->{from}           or "ikachan";
-    my $notify         = $conf->{notify}         or 0;
-    my $message_format = $conf->{message_format} or "html";
-    my $color          = $conf->{color}          or "yellow";
-    my $format         = $conf->{format}         or "json";
+    my $from           = $conf->{from}           // "ikachan";
+    my $notify         = $conf->{notify}         // 0;
+    my $message_format = $conf->{message_format} // "html";
+    my $color          = $conf->{color}          // "yellow";
+    my $format         = $conf->{format}         // "json";
 
     while ( my ( $plugin, $results ) = each %$args ) {
         $plugin =~ s/.+::Agent:://;
