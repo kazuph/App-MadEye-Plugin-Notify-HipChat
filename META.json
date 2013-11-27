@@ -4,7 +4,7 @@
       "Kazuhiro Homma <kazu.homma@gmail.com>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Minilla/v0.11.0, CPAN::Meta::Converter version 2.130880",
+   "generated_by" : "Minilla/v0.11.0, CPAN::Meta::Converter version 2.120921",
    "license" : [
       "perl_5"
    ],
@@ -54,5 +54,16 @@
       }
    },
    "release_status" : "unstable",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/kazuph/App-MadEye-Plugin-Notify-HipChat/issues"
+      },
+      "homepage" : "https://github.com/kazuph/App-MadEye-Plugin-Notify-HipChat",
+      "repository" : {
+         "type" : "git",
+         "url" : "git://github.com/kazuph/App-MadEye-Plugin-Notify-HipChat.git",
+         "web" : "https://github.com/kazuph/App-MadEye-Plugin-Notify-HipChat"
+      }
+   },
    "version" : "0.01"
 }

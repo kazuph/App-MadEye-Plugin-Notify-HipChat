@@ -36,7 +36,7 @@ App::MadEye::Plugin::Notify::HipChat - send message to HipChat
 
 # SEE ALSO
 
-[App::MadEye](http://search.cpan.org/perldoc?App::MadEye), [HipChat API](https://www.hipchat.com/docs/api/method/rooms/message)
+[App::MadEye](https://metacpan.org/pod/App::MadEye), [HipChat API](https://www.hipchat.com/docs/api/method/rooms/message)
 
 # LICENSE
 
