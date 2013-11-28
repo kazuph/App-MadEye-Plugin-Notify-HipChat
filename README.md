@@ -17,7 +17,7 @@ App::MadEye::Plugin::Notify::HipChat - send message to HipChat
             required: yes
         message:
             type: str
-            required: yes
+            required: no
         from:
             type: str
             required: no (defalut: ikachan)

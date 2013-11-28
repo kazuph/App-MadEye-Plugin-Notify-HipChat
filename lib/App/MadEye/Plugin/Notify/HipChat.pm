@@ -5,7 +5,7 @@ use warnings;
 use utf8;
 use base qw/App::MadEye::Plugin::Base/;
 
-our $VERSION = "0.01";
+our $VERSION = "0.02";
 
 use Furl;
 
@@ -20,6 +20,7 @@ sub notify : Hook {
     my $room_id        = $conf->{room_id}        or die "missing room_id";
     my $from           = $conf->{from}           // "ikachan";
     my $notify         = $conf->{notify}         // 0;
+    my $msg            = $conf->{message}        // "";
     my $message_format = $conf->{message_format} // "html";
     my $color          = $conf->{color}          // "yellow";
     my $format         = $conf->{format}         // "json";
@@ -27,7 +28,7 @@ sub notify : Hook {
     while ( my ( $plugin, $results ) = each %$args ) {
         $plugin =~ s/.+::Agent:://;
         for my $result (@$results) {
-            my $msg = "$plugin: ($result->{target}): $result->{message} ";
+            $msg .= "$plugin: ($result->{target}): $result->{message} ";
 
             my $ua = Furl->new(
                 timeout => 5,
@@ -77,7 +78,7 @@ App::MadEye::Plugin::Notify::HipChat - send message to HipChat
             required: yes
         message:
             type: str
-            required: yes
+            required: no
         from:
             type: str
             required: no (defalut: ikachan)

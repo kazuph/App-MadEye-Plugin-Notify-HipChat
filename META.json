@@ -4,7 +4,7 @@
       "Kazuhiro Homma <kazu.homma@gmail.com>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Minilla/v0.11.0, CPAN::Meta::Converter version 2.132830",
+   "generated_by" : "Minilla/v0.11.0, CPAN::Meta::Converter version 2.132661",
    "license" : [
       "perl_5"
    ],
@@ -65,7 +65,7 @@
          "web" : "https://github.com/kazuph/App-MadEye-Plugin-Notify-HipChat"
       }
    },
-   "version" : "0.01",
+   "version" : "0.02",
    "x_contributors" : [
       "Norimitsu Sasao <norimitsu.sasao@gaiax.com>",
       "vagrant <vagrant@localhost.localdomain>"
